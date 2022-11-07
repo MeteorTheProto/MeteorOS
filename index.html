@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!--links for stuff -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--page icon-->
+  <link rel="icon" type="image/x-icon" href="meteor.jpg">
+
+ <!--page title-->
+<title>MeteorOS</title>
+
+<!--differet screen scale thingy-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+  
+
+<!--page heading (its an image)-->
+<img src="MeteorOS-title.png" alt="MeteorOS" width="100%">
+
+
+<!--spaces for the currnet values from the ESPs to display-->
+<p class="currents">Brightness:</p>
+<p class="space">space</p> <!--used instead of <br> because the break was too wide to make stuff fit right-->
+<p class="currents">Current color:</p>
+
+
+  <!--Brightness slider-->
+<form oninput="light.value = brightness.value" id="bright"> <!--makes the output number value match the slider value-->
+  <label for="brightness">Brightness:</label> <!--label that says "brightness"-->
+  <input type="range" id="brightness" name="brightness" min="0" max="250" value="light"> <!--the slider itself-->
+  <output id="out2" name="light" for="brightness">#</output> <!--where the number gets displayed-->
+</form>
+
+<p class="space">space</p> <!--space break-->
+
+<!-- color picker-->
+<form oninput="colorpicker.value = curColor.value"> <!--makes the color value output show the value of the colorpicker-->
+<label id="color-lab" class="list-label" for="color-list">Color Picked: </label> <!--label that says "Color Picked"-->
+  <input type="color" id="curColor" name="curColor" value="#000000" > <!-- colorpicker itself-->
+  <output id="out" name="colorpicker" for="color-lab">#000000</output> <!-- hex output text -->
+</form>
+
+  <p class="space">space</p> <!--space break-->
+
+  <!--radio button selection list of presets-->
+<form id="color-list" oninput="out.value = preset.value; curColor.value = preset.value;"> <!--makes the colorpicker and the color picker output text show the color that was chosen from this list-->
+ 
+  <!--white-->
+  <input type="radio" id="white" name="preset" value="#ffffff"> 
+  <label for="white">White</label>
+ <p class="space">space</p> <!--space break-->
+
+ <!--pink-->
+  <input type="radio" id="pink" name="preset" value="#ff005c">
+  <label for="pink">Pink</label>
+ <p class="space" >space</p><!--space break-->
+
+ <!--light blue-->
+  <input type="radio" id="lightBlue" name="preset" value="#6188f6">
+  <label for="lightBlue">Light Blue</label>
+<p class="space">space</p><!--space break-->
+
+<!--green-->
+  <input type="radio" id="green" name="preset" value="Green">
+  <label for="green">Lime Green</label>
+<p class="space">space</p><!--space break-->
+
+<!--purpple-->
+  <input type="radio" id="purple" name="preset" value="Purple">
+  <label for="purple">Purple</label>
+<p class="space" >space</p><!--space break-->
+
+<!--teal-->
+  <input type="radio" id="teal" name="preset" value="Teal">
+  <label for="teal">Teal</label>
+<p class="space">space</p><!--space break-->
+
+<!--yellowk-->
+  <input type="radio" id="yellow" name="preset" value="Yellow">
+  <label for="yellow">Yellow</label>
+<p class="space">space</p><!--space break-->
+  
+</form>
+
+
+<!--random extra space here-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--ending tags-->
+
+</body> 
+</html>
